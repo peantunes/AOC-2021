@@ -9,11 +9,15 @@ import Foundation
 
 
 func day1() {
+    let start = Date()
+    print("*** Starting day 1 ***")
     let content = "input-day1.txt".openFile
     let lines = content.split(separator: "\n").compactMap { Int($0) }
+    print("number of Lines: \(lines.count)")
     print("total greather than: \(lines.countGreaterThanMultiple())")
     print("total greather with 3 lines: \(lines.countGreaterThanMultiple(rows: 3)))")
-    print("number of Lines: \(lines.count)")
+    print("*** ending day 1 ***", start.timeIntervalSinceNow)
+    print("\n")
 }
 
 private extension Array where Element == Int {

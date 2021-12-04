@@ -1,13 +1,15 @@
 import Foundation
 
 func day2() {
+    let start = Date()
     print("*** Starting day 2 ***")
     let content = "input-day2.txt".openFile
     let lines = content.split(separator: "\n").compactMap(SubmarineAction.init(row:))
     print("number of lines: \(lines.count)")
     print("result 1: \(lines.totalPosition)")
     print("result 2: \(lines.totalWithAim)")
-    print("\n\n")
+    print("*** ending day 2 ***", start.timeIntervalSinceNow)
+    print("\n")
 }
 
 struct SubmarineAction {
@@ -48,7 +50,7 @@ private extension Array where Element == SubmarineAction {
                 forward += move.amount
             }
         }
-        print("Forward: \(forward) | depht: \(depth)")
+//        print("Forward: \(forward) | depht: \(depth)")
         return forward * depth
     }
 
@@ -67,7 +69,7 @@ private extension Array where Element == SubmarineAction {
                 depth += aim * move.amount
             }
         }
-        print("Forward: \(forward) | depht: \(depth) | aim: \(aim)")
+//        print("Forward: \(forward) | depht: \(depth) | aim: \(aim)")
         return forward * depth
     }
 }

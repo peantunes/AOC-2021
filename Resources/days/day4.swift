@@ -1,6 +1,7 @@
 import Foundation
 
 func day4() {
+    let start = Date()
     print("*** Starting day 4 ***")
     let content = "input-day4.txt".openFile
     let lines = content.split(separator: "\n").compactMap(String.init)
@@ -10,7 +11,8 @@ func day4() {
     print("number of lines: \(lines.count)")
     print("result 1: \(winner.calculate(values: bingo.numbers))")
     print("result 2: \(looser.calculate(values: bingo.numbers))")
-    print("\n\n")
+    print("*** ending day 4 ***", start.timeIntervalSinceNow)
+    print("\n")
 }
 
 class Card {
@@ -39,7 +41,7 @@ class Card {
             numbers[numberIndex].checked = true
             if isWinner {
                 winAfter = index
-                print("card \(numbers.map(\.number)) is winner after \(index) with value: \(value)")
+//                print("card \(numbers.map(\.number)) is winner after \(index) with value: \(value)")
                 return
             }
         }
@@ -48,7 +50,7 @@ class Card {
     func calculate(values: [String]) -> Int {
         let total = numbers.filter {!$0.checked}.reduce(0, { $0 + (Int($1.number) ?? 0) })
         let number = (Int(values[winAfter]) ?? 0)
-        print(total, number)
+//        print(total, number)
         return total * number
     }
 

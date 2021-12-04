@@ -1,6 +1,7 @@
 import Foundation
 
 func day3() {
+    let start = Date()
     print("*** Starting day 3 ***")
     let content = "input-day3.txt".openFile
     let lines = content.split(separator: "\n").compactMap(String.init).map { Array.init($0).map { String($0) } }
@@ -9,10 +10,11 @@ func day3() {
 
     print("number of lines: \(lines.count)")
     print("result 1: \(lines.submarineConsumption)")
-    print("oxygen rating: \(oxygen)")
-    print("co2 rating: \(co2)")
+//    print("oxygen rating: \(oxygen)")
+//    print("co2 rating: \(co2)")
     print("result 2: \(oxygen * co2)")
-    print("\n\n")
+    print("*** ending day 3 ***", start.timeIntervalSinceNow)
+    print("\n")
 }
 
 private enum OxygenLevel {
@@ -72,9 +74,9 @@ private extension Array where Element == [String] {
                 epsilonRate += value
             }
         }
-        print("Forward: \(columns)")
-        print("game rate: \(gameRate) - \(tempRate) - \(Int(strtoul(tempRate, nil, 2)))")
-        print("epsilon rate: \(epsilonRate) - \(tempEpsil) - \(Int(strtoul(tempEpsil, nil, 2)))")
+//        print("Forward: \(columns)")
+//        print("game rate: \(gameRate) - \(tempRate) - \(Int(strtoul(tempRate, nil, 2)))")
+//        print("epsilon rate: \(epsilonRate) - \(tempEpsil) - \(Int(strtoul(tempEpsil, nil, 2)))")
         return gameRate*epsilonRate
     }
 }
