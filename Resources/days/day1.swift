@@ -16,7 +16,7 @@ func day1() {
     print("number of Lines: \(lines.count)")
 }
 
-extension Array where Element == Int {
+private extension Array where Element == Int {
 
     func countGreaterThanMultiple(rows: Int = 1) -> Int {
         var previous: Int = sumNextAmount(index: 0, amount: rows)
