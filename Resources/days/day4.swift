@@ -15,7 +15,7 @@ func day4() {
     print("\n")
 }
 
-class Card {
+private class Card {
     struct NumberInCard {
         let number: String
         var checked: Bool
@@ -79,7 +79,7 @@ class Card {
     }
 }
 
-class Bingo {
+private class Bingo {
 
     let numbers: [String]
     var cards: [Card]
