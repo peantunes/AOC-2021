@@ -1,20 +1,17 @@
 import Foundation
 
-func day3() {
-    let start = Date()
-    print("*** Starting day 3 ***")
+func day3() -> Result {
     let content = "input-day3.txt".openFile
     let lines = content.split(separator: "\n").compactMap(String.init).map { Array.init($0).map { String($0) } }
-    let oxygen = OxygenLevel.oxygenRating(array: lines)
-    let co2 = OxygenLevel.co2Rating(array: lines)
 
-    print("number of lines: \(lines.count)")
-    print("result 1: \(lines.submarineConsumption)")
-//    print("oxygen rating: \(oxygen)")
-//    print("co2 rating: \(co2)")
-    print("result 2: \(oxygen * co2)")
-    print("*** ending day 3 ***", start.timeIntervalSinceNow)
-    print("\n")
+    return Result(day: 3,
+                  numberOfLines: lines.count,
+                  solution1: { lines.submarineConsumption },
+                  solution2: {
+                    let oxygen = OxygenLevel.oxygenRating(array: lines)
+                    let co2 = OxygenLevel.co2Rating(array: lines)
+                    return oxygen * co2
+                  })
 }
 
 private enum OxygenLevel {

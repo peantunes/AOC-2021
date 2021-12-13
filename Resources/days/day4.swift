@@ -1,18 +1,14 @@
 import Foundation
 
-func day4() {
-    let start = Date()
-    print("*** Starting day 4 ***")
+func day4() -> Result {
     let content = "input-day4.txt".openFile
     let lines = content.split(separator: "\n").compactMap(String.init)
     let bingo = Bingo(lines: lines)
-    let winner = bingo.winner()
-    let looser = bingo.looser()
-    print("number of lines: \(lines.count)")
-    print("result 1: \(winner.calculate(values: bingo.numbers))")
-    print("result 2: \(looser.calculate(values: bingo.numbers))")
-    print("*** ending day 4 ***", start.timeIntervalSinceNow)
-    print("\n")
+
+    return Result(day: 4,
+                  numberOfLines: lines.count,
+                  solution1: { bingo.winner().calculate(values: bingo.numbers) },
+                  solution2: { bingo.looser().calculate(values: bingo.numbers) })
 }
 
 private class Card {

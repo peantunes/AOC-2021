@@ -1,15 +1,14 @@
 import Foundation
 
-func day2() {
-    let start = Date()
-    print("*** Starting day 2 ***")
+func day2() -> Result {
+
     let content = "input-day2.txt".openFile
     let lines = content.split(separator: "\n").compactMap(SubmarineAction.init(row:))
-    print("number of lines: \(lines.count)")
-    print("result 1: \(lines.totalPosition)")
-    print("result 2: \(lines.totalWithAim)")
-    print("*** ending day 2 ***", start.timeIntervalSinceNow)
-    print("\n")
+
+    return Result(day: 2,
+                  numberOfLines: lines.count,
+                  solution1: { lines.totalPosition },
+                  solution2: { lines.totalWithAim })
 }
 
 struct SubmarineAction {

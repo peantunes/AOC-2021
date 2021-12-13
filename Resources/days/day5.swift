@@ -1,17 +1,14 @@
 import Foundation
 
-func day5() {
-    let start = Date()
-    print("*** Starting day 5 ***")
+func day5() -> Result {
     let content = "input-day5.txt".openFile
     let lines = content.split(separator: "\n").compactMap(String.init)
     let termals = Hydrotermals(lines: lines)
-//    print(termals.coordinates.map(\.description))
-    print("number of lines: \(lines.count)")
-    print("result 1: \(termals.numberOfChangesa1())")
-    print("result 2: \(termals.numberOfChangesa2())")
-    print("*** ending day 5 ***", start.timeIntervalSinceNow)
-    print("\n")
+
+    return Result(day: 5,
+                  numberOfLines: lines.count,
+                  solution1: { termals.numberOfChangesa1() },
+                  solution2: { termals.numberOfChangesa2() })
 }
 
 private class Hydrotermals {

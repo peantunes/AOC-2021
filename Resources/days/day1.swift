@@ -8,16 +8,14 @@
 import Foundation
 
 
-func day1() {
-    let start = Date()
-    print("*** Starting day 1 ***")
+func day1() -> Result {
     let content = "input-day1.txt".openFile
     let lines = content.split(separator: "\n").compactMap { Int($0) }
-    print("number of Lines: \(lines.count)")
-    print("total greather than: \(lines.countGreaterThanMultiple())")
-    print("total greather with 3 lines: \(lines.countGreaterThanMultiple(rows: 3)))")
-    print("*** ending day 1 ***", start.timeIntervalSinceNow)
-    print("\n")
+
+    return Result(day: 1,
+                  numberOfLines: lines.count,
+                  solution1: { lines.countGreaterThanMultiple() },
+                  solution2: { lines.countGreaterThanMultiple(rows: 3) })
 }
 
 private extension Array where Element == Int {

@@ -1,14 +1,12 @@
 import Foundation
 
-func day9() {
-    let start = Date()
-    print("*** Starting day 9 ***")
+func day9() -> Result {
     let values = "input-day9.txt".openFile.split(separator: "\n").map { $0.compactMap { Int(String($0)) } }
-    print("number of lines: \(values.count)")
-    print("result 1: \(solution1(values: values))")
-    print("result 2: \(solution2(values: values))")
-    print("*** ending day 9 ***", start.timeIntervalSinceNow)
-    print("\n")
+
+    return Result(day: 9,
+                  numberOfLines: values.count,
+                  solution1: { solution1(values: values) },
+                  solution2: { solution2(values: values) })
 }
 
 private func solution1(values: [[Int]]) -> Int {
