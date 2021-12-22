@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CD40C5F277284E800A55118 /* day21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD40C5E277284E800A55118 /* day21.swift */; };
 		A819EDF427633FE2005A9EE0 /* day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = A819EDF327633FE2005A9EE0 /* day10.swift */; };
 		A819EDF827634F8C005A9EE0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A819EDF727634F8C005A9EE0 /* Result.swift */; };
 		A819EDFA27648F76005A9EE0 /* day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = A819EDF927648F76005A9EE0 /* day11.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9CD40C5E277284E800A55118 /* day21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day21.swift; sourceTree = "<group>"; };
 		A819EDF12761DACC005A9EE0 /* input-day9-sample.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "input-day9-sample.txt"; sourceTree = "<group>"; };
 		A819EDF22761DBCA005A9EE0 /* input-day9.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "input-day9.txt"; sourceTree = "<group>"; };
 		A819EDF327633FE2005A9EE0 /* day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day10.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		A8A3FDBF2757A20100B11E61 /* days */ = {
 			isa = PBXGroup;
 			children = (
+				9CD40C5E277284E800A55118 /* day21.swift */,
 				A819EDFD2765DC87005A9EE0 /* day12.swift */,
 				A819EDF927648F76005A9EE0 /* day11.swift */,
 				A819EDF327633FE2005A9EE0 /* day10.swift */,
@@ -287,6 +290,7 @@
 				A8A3FDC62757A29000B11E61 /* String+File.swift in Sources */,
 				A8A3FDE6275F831C00B11E61 /* 2020_day2.swift in Sources */,
 				A8A3FDE8275F886F00B11E61 /* 2020_day4.swift in Sources */,
+				9CD40C5F277284E800A55118 /* day21.swift in Sources */,
 				A8A3FDCF275B4D3800B11E61 /* day4.swift in Sources */,
 				A8A3FDC92758D46900B11E61 /* day2.swift in Sources */,
 				A8A3FDC52757A28C00B11E61 /* day1.swift in Sources */,
