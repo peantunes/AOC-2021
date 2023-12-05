@@ -20,12 +20,14 @@ import Foundation
 //day10().run()
 //day11().run()
 //day12().run()
-day21().run()
+//day21().run()
 
-let aoc2020 = AdventOfCode2020()
+//let aoc2022 = AdventOfCode2022()
 //aoc2020.day1()
 //aoc2020.day2()
 //aoc2020.day3()
 //aoc2020.day4()
 //aoc2020.day5()
 
+let aoc2023 = AdventOfCode2023()
+aoc2023.day5()

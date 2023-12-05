@@ -2,7 +2,7 @@ import Foundation
 
 extension String {
     var openFile: String {
-        guard let data = try? Data(contentsOf:  URL(fileURLWithPath: "/Users/pedroan/Development/Pedro/AdventOfCode/Resources/files/\(self)")) else {
+        guard let data = try? Data(contentsOf:  URL(fileURLWithPath: "/Users/pedroan/code/Pedro/AOC-2021/Resources/files/\(self)")) else {
             fatalError("error to open file \(self)")
         }
 
